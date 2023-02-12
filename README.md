@@ -1,32 +1,37 @@
-# Frontend Assessment
+# Frontend Test
 
-When assessing the results of your work, we will be paying most attention to the architecture and design of the application performance, code quality and usability.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#### Candidate Details
+Name: Dom I.K Ubah.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+I wrote some tests. To run them:
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-## Notes App
-
-Your task is to implement a note taking app. We already provide you with a basic scaffold with static data of how the note apps is going to look like. You will be required to implement these features
-
-- Create a new note
-- Edit existing note
-- Delete note
-
-
-Technologies allowed:
-
-- Typescript
-- React native without UI libraries. 
-
-As a bonus you can implement the following f
-
-- Saving to Asyncstorage and restoring them
-- Saving notes to REST API, Note: you're not required to implement the API, you can mock it, but the mocks should be asynchronous.
-
-
-## How to run scaffold
-
-- Make sure you have expo setup https://docs.expo.dev/get-started/installation/
-- Run app with npx expo start
-- Run in simulator
-
-Sidenote: If you dont have a Macbook then setting up react native and expo might be a problem so you will have to implement this in plain React.
