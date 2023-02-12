@@ -5,6 +5,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 #### Candidate Details
 Name: Dom I.K Ubah.
 
+#### Site URL
+https://note-app-beta-one.vercel.app
+
+
 ## Available Scripts
 
 In the project directory, you can run:
