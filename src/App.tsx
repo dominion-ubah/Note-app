@@ -19,7 +19,7 @@ const App: React.FC = () => {
     setNotes([
       ...notes,
       {
-        id: notes[notes.length - 1].id + 1,
+        id: Number(new Date()),
         title: inputTitle,
         note: inputNote,
         description: inputDesc,
@@ -97,12 +97,21 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    if (localDataStore?.length && !notes.length) {
-      setNotes(localDataStore);
-    } else if (!notes.length) {
-      setNotes(Notes);
+    if (!notes.length) {
+      if (localDataStore?.length) {
+        setNotes(localDataStore);
+      } else {
+        setNotes(Notes);
+      }
     }
     updateDataStore();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (localDataStore !== notes) {
+      updateDataStore();
+    }
   }, [localDataStore, notes, updateDataStore]);
 
   return (
@@ -118,7 +127,7 @@ const App: React.FC = () => {
         setInputDesc={setInputDesc}
         handleAddNote={handleAddNote}
       />
-      <NoteLayout title={"Notes"}>
+      <NoteLayout title={"Notes"} notesLength={notes?.length}>
         <ul className="task-list">
           {notes
             .sort(function (a, b) {
