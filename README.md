@@ -3,11 +3,42 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 #### Candidate Details
+
 Name: Dom I.K Ubah.
 
 #### Site URL
+
 https://note-app-beta-one.vercel.app
 
+#### Methodology
+
+Wrote some plain CSS making use of [BEM](https://getbem.com/) standards
+However I still placed all styles in one page following [Tailwind](https://tailwindcss.com/docs/guides/create-react-app) configs methods
+
+### Available Components
+
+- Form Button
+- Form Input
+- No Note
+- Note Form
+- Note Item
+- Note Layout
+
+### Available Pages
+
+- App Page
+
+### Data Pages
+
+All static data can be found in the data.ts page in the `src/data` folder
+
+### Available Interfaces (types)
+
+All interfaces are in the `src/interfaces` folder
+
+- Note
+
+---
 
 ## Available Scripts
 
@@ -23,7 +54,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-I wrote some tests. To run them:
+(I wrote some tests in the App.tsx:)
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -31,11 +62,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-

@@ -8,6 +8,9 @@
   --checkbox-shadow: rgba(238, 156, 167, 0.2);
   --add-button: #ee9ca7;
   --add-button-shadow: rgba(238, 156, 167, 0.4);
+  --add-accent-color: goldenrod;
+  --white-color: #fff;
+  --slate-color: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -16,7 +19,7 @@ body {
   margin: 0;
   padding: 16px;
   display: flex;
-  color: goldenrod;
+  color: var(--add-accent-color);
   justify-content: center;
   align-items: top;
   background-image: linear-gradient(
@@ -74,7 +77,7 @@ ul {
   font-size: 20px;
   line-height: 32px;
   margin: 0 0 12px 0;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .submit-task {
@@ -83,7 +86,7 @@ ul {
   flex-shrink: 0;
   border: none;
   background: var(--add-button);
-  color: #fff;
+  color: var(--white-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E");
   background-size: 18px;
   background-position: center;
@@ -99,10 +102,11 @@ ul {
 }
 
 .add-task label {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--slate-color);
 }
+
 .subtitle {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--slate-color);
   padding: 0.5em 0 0 0;
   margin: 0;
 }
@@ -113,16 +117,17 @@ ul {
   padding: 0 4px;
   outline: none;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white-color);
   background-color: transparent;
   margin-right: 12px;
   margin-bottom: 1em;
-  color: #fff;
+  color: var(--white-color);
   box-shadow: none;
   border-radius: 0;
 }
+
 .task-input:placeholder {
-  color: #fff;
+  color: var(--white-color);
 }
 
 .task-list-item {
@@ -133,23 +138,25 @@ ul {
   align-items: center;
   padding: 8px;
 }
+
 .action-btns {
   margin-left: auto;
   display: flex;
 }
+
 .button {
   cursor: pointer;
-  background: rgba(238, 156, 167, 0.2);
+  background: var(--checkbox-shadow);
   width: 100%;
   text-align: center;
   border: 0;
   padding: 10px 15px;
-  color: #ffffff;
+  color: var(--white-color);
   transition: 0.3s ease;
 }
 
 .button:hover {
-  background: #ee9ca7;
+  background: var(--checkbox-color);
 }
 
 .task-list-container {
@@ -157,6 +164,7 @@ ul {
   padding: 1em 0;
   overflow-y: auto;
 }
+
 .task-list-scroll {
   height: auto;
 }
@@ -165,7 +173,7 @@ ul {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid var(--white-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check' stroke='%23fff'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
@@ -178,27 +186,32 @@ ul {
   -moz-appearance: none;
   appearance: none;
 }
+
 .note-details {
   padding-left: 2em;
 }
+
 .task-list-item input:hover {
   border-color: var(--checkbox-color);
   box-shadow: 0 0 0 3px var(--checkbox-shadow);
 }
+
 .task-list-item input:checked {
   background-size: 10px;
   border: 1px solid var(--checkbox-color);
   background-color: var(--checkbox-color);
 }
+
 .task-list-item input:checked + span {
   color: rgba(255, 255, 255, 0.5);
-  -webkit-text-decoration: line-through rgba(255, 255, 255, 0.8);
-  text-decoration: line-through rgba(255, 255, 255, 0.8);
+  -webkit-text-decoration: line-through var(--slate-color);
+  text-decoration: line-through var(--slate-color);
 }
+
 .task-list-item-label {
   display: flex;
   align-items: flex-start;
-  color: #fff;
+  color: var(--white-color);
   margin-right: 8px;
   font-size: 14px;
   line-height: 24px;
@@ -218,6 +231,7 @@ ul {
   background-position: center;
   cursor: pointer;
 }
+
 .edit-btn {
   margin-left: auto;
   margin: 0 1em;
@@ -243,6 +257,7 @@ ul {
   .app-container {
     width: 100%;
   }
+
   p {
     width: 250px;
     white-space: nowrap;

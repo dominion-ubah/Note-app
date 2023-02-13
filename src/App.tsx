@@ -15,6 +15,12 @@ const App: React.FC = () => {
     localStorage.getItem("data_store") as string
   );
 
+  const isValid: boolean = !!(
+    inputTitle.length &&
+    inputNote.length &&
+    inputDesc.length
+  );
+
   const createNewNote = useCallback((): void => {
     setNotes([
       ...notes,
@@ -56,13 +62,15 @@ const App: React.FC = () => {
   }, [notes]);
 
   const handleAddNote = useCallback((): void => {
+    if (!isValid) return;
+
     if (editedId) {
       editSingleNote(editedId);
     } else {
       createNewNote();
     }
     resetNoteForm();
-  }, [createNewNote, editSingleNote, editedId]);
+  }, [createNewNote, editSingleNote, editedId, isValid]);
 
   const handleNoteClick = useCallback(
     (index: number): void => {
