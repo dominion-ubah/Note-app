@@ -11,9 +11,12 @@ Name: Dom I.K Ubah.
 https://note-app-beta-one.vercel.app
 
 #### Methodology
-
+- Visual Design
 Wrote some plain CSS making use of [BEM](https://getbem.com/) standards
 However I still placed all styles in one page following [Tailwind](https://tailwindcss.com/docs/guides/create-react-app) configs methods
+
+- Data Flow Design
+Normally I would break functions and state into various context and connect components with hooks in a larger app but to keep it simple I have chosen not to do this
 
 ### Available Components
 
